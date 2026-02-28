@@ -1,18 +1,38 @@
 import { useForm } from "react-hook-form";
 import { Mail, Github, Linkedin, Send } from "lucide-react";
 import { personalInfo, socialLinks } from "../mock";
+import toast from "react-hot-toast";
 
 const Contact = () => {
-    const {
-        register,
-        handleSubmit,
-        reset,
-        formState: { errors, isSubmitting },
-    } = useForm();
+    const {register,handleSubmit,reset,formState: { errors, isSubmitting },} = useForm();
 
     const onSubmit = async (data) => {
-        console.log(data); // later backend API
-        reset();
+        console.log(data);
+        try {
+
+            const response = await fetch("https://protfolio-backend-gamma.vercel.app/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+
+            })
+
+             await response.json()
+            if (response.ok) {
+                toast.success("Thank you! Your message has reached me.")
+                reset(); 
+            } else {
+                toast.error("Sorry, the message could not be sent.")
+              
+            }
+
+            reset();
+        } catch (error) {
+            toast.error("Sorry, the message could not be sent.")
+            console.log(error);
+        }
     };
     const socialIcons = {
         Github: Github,
