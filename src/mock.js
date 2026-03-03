@@ -2,11 +2,13 @@
 export const personalInfo = {
   name: "Riyadh Mahmud Sajid",
   role: "Full Stack Developer",
-  tagline: "Building modern web applications with React,Next.js, Node.js & MongoDB",
+  tagline: "Building modern web applications with React,Next.js, Node.js , Express, MongoDB,PostgreSQL,Prisma ",
   bio: "Passionate full-stack developer with expertise in modern web technologies including React, Next.js, Node.js, Express, MongoDB, and PostgreSQL. I love creating responsive, user-friendly applications that solve real-world problems. Experienced in both frontend and backend development with a strong foundation in JavaScript ecosystem.",
-  email: "your.email@example.com",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  email: "rdhsajid@gmail.com",
+  emailLink:"https://mail.google.com/mail/u/0/#inbox?compose=new",
+  phone:"01996371082",
+  github: "https://github.com/RiyadhMahmudSajid",
+  linkedin: "https://www.linkedin.com/in/riyadh-mahmud-sajid-a08823366/",
   resume: "/resume.pdf"
 };
 
@@ -27,14 +29,15 @@ export const skills = [
       { name: "Node.js", icon: "Server" },
       { name: "Express", icon: "Route" },
       { name: "MongoDB", icon: "Database" },
-      { name: "PostgreSQL", icon: "Database" }
+      { name: "PostgreSQL", icon: "Database" },
+      { name: "Prisma", icon: "Pyramid" }
     ]
   },
   {
     category: "Tools & Others",
     technologies: [
       { name: "Git", icon: "GitBranch" },
-      { name: "REST API", icon: "link" },
+      { name: "REST API", icon: "Webhook" },
       { name: "Responsive Design", icon: "Layout" },
       { name: "Tailwind CSS", icon: "Paintbrush" }
     ]
@@ -42,50 +45,51 @@ export const skills = [
 ];
 
 export const projects = [
-  {
+   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce application with shopping cart, payment integration, and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    github: "https://github.com/yourusername/project1",
-    demo: "https://demo-link.com",
+    title: "Task Management App",
+    description: "MedPlus is a secure multi-vendor pharmacy marketplace featuring role-based access for Customers, Sellers, and Admins. Built with Better-Auth and Resend, it ensures a trusted, seamless experience for medicine trade with a focus on high security",
+    technologies: ["Next.js","TailwindCSS","Shadcn","TypeScript","Better Auth","Resend","Node.js", "Express","PostgreSQL", "Prisma"],
+    image: "https://i.ibb.co.com/PZScp9PH/1648794675image-2.webp",
+    github: "https://github.com/RiyadhMahmudSajid/medistore-fullstack.git",
+    demo: "https://medistore-client-beta.vercel.app/",
     featured: true
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Real-time task management application with drag-and-drop functionality and team collaboration features.",
-    technologies: ["Next.js", "PostgreSQL", "Prisma", "TailwindCSS"],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-    github: "https://github.com/yourusername/project2",
-    demo: "https://demo-link.com",
+    title: "E-Commerce Platform",
+    description: "ShopHub is a secure e-commerce platform with role-based access and SSLCommerz payment integration. Using TanStack Query, it provides fast performance and a seamless shopping journey for all users. A scalable solution focused on speed and smooth user experience.",
+    technologies: ["React","TailwindCSS","Firebase", "Node.js", "MongoDB", "Express"],
+    image: "https://i.ibb.co.com/8gc6tR23/showing-cart-trolley-shopping-online-sign-graphic.jpg",
+    github: "https://github.com/RiyadhMahmudSajid/e-commerce-platform-fullstack.git",
+    demo: "https://e-commerce-8ba86.web.app/",
     featured: true
   },
+ 
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "Interactive weather dashboard with real-time data visualization and location-based forecasts.",
-    technologies: ["React", "Chart.js", "API Integration"],
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80",
-    github: "https://github.com/yourusername/project3",
-    demo: "https://demo-link.com",
+    title: "CarEase - A Car Rental Ecosystem",
+    description: "CarEase is a premium car rental platform featuring smooth React Motion animations and Recharts analytics. It provides a secure, role-based experience for booking vehicles and managing fleets. A high-performance solution focused on stunning UI and seamless UX.",
+    technologies: ["React","TailwindCSS","Firebase", "Node.js", "MongoDB", "Express"],
+    image: "https://i.ibb.co.com/0jLPKL8J/2024-Exeed-Starway-Star-Era-Es-Luxurious-High-Tech-Electric-Vehicle-Stylish-and-Comfortable-Electric.webp",
+    github: "https://github.com/RiyadhMahmudSajid/car-rental-fullstack.git",
+    demo: "https://car-rental-4b1d1.web.app",
     featured: false
   },
-  {
-    id: 4,
-    title: "Blog Platform",
-    description: "Modern blogging platform with markdown support, comments, and user authentication.",
-    technologies: ["Next.js", "MongoDB", "NextAuth", "MDX"],
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
-    github: "https://github.com/yourusername/project4",
-    demo: "https://demo-link.com",
-    featured: false
-  }
+  // {
+  //   id: 4,
+  //   title: "Blog Platform",
+  //   description: "Modern blogging platform with markdown support, comments, and user authentication.",
+  //   technologies: ["Next.js", "MongoDB", "NextAuth", "MDX"],
+  //   image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+  //   github: "https://github.com/yourusername/project4",
+  //   demo: "https://demo-link.com",
+  //   featured: false
+  // }
 ];
 
 export const socialLinks = [
-  { name: "GitHub", url: "https://github.com/yourusername", icon: "Github" },
-  { name: "LinkedIn", url: "https://linkedin.com/in/yourusername", icon: "Linkedin" },
-  { name: "Twitter", url: "https://twitter.com/yourusername", icon: "Twitter" }
+  { name: "Facebook", url: "https://www.facebook.com/share/1BeoQWbmKh/", icon: "Facebook" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/riyadh-mahmud-sajid-a08823366/", icon: "Linkedin" },
+  { name: "Twitter", url: "https://mail.google.com/mail/u/0/#inbox?compose=new", icon: "Twitter" }
 ];

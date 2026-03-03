@@ -1,11 +1,11 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, Facebook } from 'lucide-react';
 import { socialLinks } from '../mock';
 
 
 const Footer = () => {
   const socialIcons = {
-    Github: Github,
+    Facebook: Facebook,
     Linkedin: Linkedin,
     Twitter: Mail
   };

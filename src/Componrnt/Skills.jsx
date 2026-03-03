@@ -4,6 +4,7 @@ import * as LucideIcons from 'lucide-react';
 import { skills } from '../mock';
 
 
+
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });

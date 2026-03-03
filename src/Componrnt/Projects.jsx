@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
-import { projects } from '../mock';
+import { projects , personalInfo } from '../mock';
+
 
 
 const Projects = () => {
@@ -55,7 +56,7 @@ const Projects = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid md:grid-cols-2 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           {projects.map((project) => (
             <motion.div key={project.id} variants={itemVariants}>
@@ -67,35 +68,36 @@ const Projects = () => {
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60"></div>
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <button
-                        
-                        className="bg-white/90 hover:bg-white text-sm text-gray-900 shadow-lg"
+                  <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                    <div className="flex flex-col sm:flex-row gap-3 w-full max-w-[200px] sm:max-w-none sm:justify-center">
+
+                      {/* GitHub/Code Button */}
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto"
                       >
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </button>
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <button
-                      
-                        className="bg-gradient-to-r text-sm from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white shadow-lg"
+                        <button className="w-full flex items-center justify-center px-4 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform sm:hover:-translate-y-1 active:scale-95 shadow-lg">
+                          <Github className="h-4 w-4 mr-2 shrink-0" />
+                          <span>Code</span>
+                        </button>
+                      </a>
+
+                      {/* Demo Button */}
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto"
                       >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
-                      </button>
-                    </a>
+                        <button className="w-full flex items-center justify-center px-4 py-2.5 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white text-sm font-medium rounded-xl hover:from-emerald-400 hover:to-cyan-400 transition-all duration-300 transform sm:hover:-translate-y-1 active:scale-95 shadow-xl shadow-emerald-500/20">
+                          <ExternalLink className="h-4 w-4 mr-2 shrink-0" />
+                          <span className="whitespace-nowrap">Live Demo</span>
+                        </button>
+                      </a>
+
+                    </div>
                   </div>
                 </div>
 
@@ -117,10 +119,24 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
+
               </div>
+
             </motion.div>
           ))}
+
         </motion.div>
+        <div className='flex items-center justify-center mt-16'>
+          <a
+            href={ personalInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <button className=" flex items-center justify-center px-4 py-2.5 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white text-sm font-medium rounded-xl hover:from-emerald-400 hover:to-cyan-400 transition-all duration-300 transform sm:hover:-translate-y-1 active:scale-95 shadow-xl shadow-emerald-500/20">Explore All Project</button>
+          </a>
+
+        </div>
       </div>
     </section>
   );

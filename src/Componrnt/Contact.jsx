@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send, Facebook, Phone } from "lucide-react";
 import { personalInfo, socialLinks } from "../mock";
 import toast from "react-hot-toast";
 
@@ -35,7 +35,7 @@ const Contact = () => {
         }
     };
     const socialIcons = {
-        Github: Github,
+        Facebook: Facebook,
         Linkedin: Linkedin,
         Twitter: Mail
     };
@@ -148,6 +148,20 @@ const Contact = () => {
                                         <p className="text-sm text-gray-400">Email</p>
                                         <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">
                                             {personalInfo.email}
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="mt-4">
+                                <a
+                                    href={`mailto:${personalInfo.phone}`}
+                                    className="flex items-center space-x-4 p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20 group"
+                                >
+                                    <Phone className="h-6 w-6 text-emerald-400 group-hover:scale-110 transition-transform" />
+                                    <div>
+                                        <p className="text-sm text-gray-400">Phone</p>
+                                        <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">
+                                            {personalInfo.phone}
                                         </p>
                                     </div>
                                 </a>

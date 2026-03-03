@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="text-2xl font-bold flex items-center group gap-2">
           <Code2 className="h-6 w-6 text-emerald-500 group-hover:rotate-180 transition-transform duration-500" />
            <span className="bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent font-extrabold">
-              Portfolio
+              Riyadh Mahmud
             </span>
         </div>
 
@@ -34,9 +34,13 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <button className="flex items-center gap-2 bg-gradient-to-r from-primaryGreen to-primaryBlue px-5 py-2 rounded-full text-darkBackground font-bold text-sm hover:opacity-90 transition-all">
+          <a
+          href="#contact"
+          >
+            <button className="flex items-center gap-2 bg-gradient-to-r from-primaryGreen to-primaryBlue px-5 py-2 rounded-full text-darkBackground font-bold text-sm hover:opacity-90 transition-all">
             Contact <Send size={16} />
           </button>
+          </a>
         </div>
       </div>
     </motion.nav>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
 import { personalInfo } from '../mock';
 import Button from './ui/Button';
-
+import Profile from '/profile.jpg'
 
 
 const Hero = () => {
@@ -126,7 +126,7 @@ const Hero = () => {
               {[
                 { Icon: Github, href: personalInfo.github },
                 { Icon: Linkedin, href: personalInfo.linkedin },
-                { Icon: Mail, href: `mailto:${personalInfo.email}` }
+                { Icon: Mail, href: personalInfo.emailLink }
               ].map(({ Icon, href }, index) => (
                 <a
                   key={index}
@@ -176,7 +176,7 @@ const Hero = () => {
                 {/* Inner container */}
                 <div className="absolute inset-2 rounded-full bg-black border-4 border-emerald-500/20 overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop"
+                    src={Profile}
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />
