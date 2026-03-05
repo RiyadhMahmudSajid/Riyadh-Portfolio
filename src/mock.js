@@ -47,7 +47,7 @@ export const skills = [
 export const projects = [
    {
     id: 1,
-    title: "Task Management App",
+    title: "MedPlus - Secure Multi-Vendor Online Pharmacy",
     description: "MedPlus is a secure multi-vendor pharmacy marketplace featuring role-based access for Customers, Sellers, and Admins. Built with Better-Auth and Resend, it ensures a trusted, seamless experience for medicine trade with a focus on high security",
     technologies: ["Next.js","TailwindCSS","Shadcn","TypeScript","Better Auth","Resend","Node.js", "Express","PostgreSQL", "Prisma"],
     image: "https://i.ibb.co.com/PZScp9PH/1648794675image-2.webp",
@@ -60,7 +60,7 @@ export const projects = [
     title: "E-Commerce Platform",
     description: "ShopHub is a secure e-commerce platform with role-based access and SSLCommerz payment integration. Using TanStack Query, it provides fast performance and a seamless shopping journey for all users. A scalable solution focused on speed and smooth user experience.",
     technologies: ["React","TailwindCSS","Firebase", "Node.js", "MongoDB", "Express"],
-    image: "https://i.ibb.co.com/8gc6tR23/showing-cart-trolley-shopping-online-sign-graphic.jpg",
+    image: "https://i.ibb.co.com/F4bJ7bRm/64a7e3ad11a3d501576c4bf3-How-Can-SHOPLINE-Help-in-the-Current-E-Commerce-Situation-2.png",
     github: "https://github.com/RiyadhMahmudSajid/e-commerce-platform-fullstack.git",
     demo: "https://e-commerce-8ba86.web.app/",
     featured: true
