@@ -98,22 +98,28 @@ const Hero = () => {
             >
 
               <button
-               
+
                 onClick={() => scrollToSection('projects')}
-               className="flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-blue-600  px-8 py-3 rounded-full text-white font-bold text-sm hover:opacity-90 transition-all"
+                className="flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-blue-600  px-8 py-3 rounded-full text-white font-bold text-sm hover:opacity-90 transition-all"
               >
                 View My Work
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <Button
-                variant="outline"
-                onClick={() => scrollToSection('contact')}
-                className="border-primaryGreen/50 text-primaryGreen hover:bg-primaryGreen/5 px-8 py-3"
+              <a
+                href={personalInfo.resume}
+                download="Riyadh_Mahmud_Sajid_Resume.pdf"
+                className="no-underline"
               >
-                <Download className="h-4 w-4" />
-                Download CV
-              </Button>
+                <Button
+                  variant="outline"
+                  className="border-primaryGreen/50 text-primaryGreen hover:bg-primaryGreen/5 px-8 py-3"
+                >
+                  <Download className="h-4 w-4" />
+                  Download Resume
+                </Button>
+              </a>
+
             </motion.div>
 
             {/* Social Links */}
